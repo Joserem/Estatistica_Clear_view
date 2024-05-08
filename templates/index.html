@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualização de Dados</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Front- end -->
+
+<body>
+    <header>
+        <nav class="navigation">
+
+            <h1 class="colorful-text">
+                <span>G</span>
+                <span>R</span>
+                <span>A</span>
+                <span>F</span>
+                <span> </span>
+                <span>M</span>
+                <span>A</span>
+                <span>T</span>
+            </h1>
+
+            <ul class="nav-menu">
+                <li class="nav-iten"><a href="#home">Home</a></li>
+                <li class="nav-iten"><a href="#sobre">Sobre</a></li>
+                <li class="nav-iten"><a href="#dados">Dados</a></li>
+                <li class="nav-iten"><a href="#produtos">Produtos</a></li>
+                <i class='bx bx-search'></i>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="home">
+
+            <div class="home-text">
+                <h4 class="text-h4">Bem vindo ao GRAF MAT </h4>
+            
+            </div>
+        
+        <!-- Dados do back - end -->
+
+        </section>
+        <section id="dados">
+            <form id="myForm">
+                <input type="radio" name="opcao" value="1"> Vendas e Receitas<br>
+                <input type="radio" name="opcao" value="2"> Despesas<br>
+                <input type="radio" name="opcao" value="3"> Satisfação do Cliente<br>
+
+                <input type="submit" value="Enviar">
+            </form>
+            <div id="graph"></div>
+        </section>
+    </main>
+    <script>
+        $(function() {
+            $('#myForm').on('submit', function(e) {
+                e.preventDefault();
+                $.post('/data', $(this).serialize(), function(data) {
+                    var graphs = JSON.parse(data);
+                    Plotly.newPlot('graph', graphs.data, graphs.layout);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
