@@ -13,8 +13,16 @@ def index():
 
 @app.route('/data', methods=['POST'])
 def data():
-    # Carregando os dados do arquivo Excel
-    df = pd.read_excel('dados_empresa.xlsx')
+    # Verifique se o post request tem o arquivo parte
+    if 'file' not in request.files:
+        return 'No file part'
+    file = request.files['file']
+    # Se o usuário não selecionar o arquivo, o navegador também
+    # enviar um arquivo vazio sem nome.
+    if file.filename == '':
+        return 'No selected file'
+    if file:
+        df = pd.read_excel(file)
 
     # Definindo as faixas de cores
     bins = [0, df['Despesas'].max() / 3, 2 * df['Despesas'].max() / 3, df['Despesas'].max()]
