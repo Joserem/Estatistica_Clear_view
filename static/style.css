@@ -193,9 +193,9 @@ body{
     color: var(--white)
 }
 .home-img{
-    width: 850px;
-    height: 200px;
-    margin-top: -890px;
+    width: 895px;
+    height: 490px;
+    margin-top: -450px;
     
 }
 @media screen and (max-width:1180px) {
