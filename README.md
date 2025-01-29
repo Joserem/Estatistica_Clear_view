@@ -1,7 +1,47 @@
-# Sistema Analise de Dados 
-A data visualization system made with Python, flask framework, Html and Css , Pandas e Ploty 
+# 📊 Data Analysis System
+An interactive data visualization system developed with Python, using Flask, Pandas, and Plotly to generate insights from Excel files.
 
-## Some app screenshots
+## 📌 About the Project
+This project was developed as part of an academic work and also to enhance my portfolio. The goal is to provide an accessible tool for statistical data analysis, combining descriptive statistics with interactive visualization.
+
+## 🚀 Features
+- 📂 Upload Excel (.xlsx, .csv) files for data analysis.
+- 📊 Generate interactive charts with Plotly.
+- 📈 Automatic descriptive statistics calculations.
+- 🔍 Dynamic filters, such as date range and category classification.
+- 🎨 Highlight expense values in bar charts, based on value ranges.
+- 🖥️ Simple and intuitive interface for data exploration.
+
+## 🛠 Installation & Usage
+🔧 Requirements
+- Python 3.8+ installed on your system.
+- pip package manager.
+- Dependencies listed in requirements.txt.
+
+## 📥 Steps to Run
+1. Clone the repository:
+   ```sh
+    git clone https://github.com/Joserem/Estatistica_Clear_view.git
+
+2. Navigate to the project folder:
+   ```sh
+    cd Estatistica_Clear_view
+  
+3. Install dependencies:
+    ```sh
+   pip install -r requirements.txt
+    
+4. Run the application:
+    ```sh
+   python app.py
+5. Access in your browser:
+    ```sh
+   http://127.0.0.1:5000/
+
+## 💡 Why this project ?
+This project was created to deepen my knowledge in Python, Flask, and data visualization. It demonstrates how raw data can be transformed into valuable insights through interactive charts and descriptive statistics.
+
+## 📷 Screenshots
 
 ![image](https://github.com/Joserem/Estatistica_Clear_view/assets/139785021/e9f92c7a-bfa7-4062-bb13-56fefde387bd)
 
@@ -13,25 +53,14 @@ A data visualization system made with Python, flask framework, Html and Css , Pa
 ![image](https://github.com/Joserem/Estatistica_Clear_view/assets/139785021/a800aa42-3db2-4649-bbba-838844ced8a4)
 ![image](https://github.com/Joserem/Estatistica_Clear_view/assets/139785021/b57f599c-084d-43af-a6a0-ddef60b5a24b)
 
-## About this Project 
+## ⚠ Notes
 
-A web application with interactive data visualization based on information contained in an excel file
+- The system was tested with dummy data in an Excel file.
 
-## Functionalities
+- If using your own data, you may need to adjust columns and formatting.
 
-- The user can interact with the system by uploading a file and choosing the view desired.
-- The code uses descriptive statistics integrated with data visualizations
-- Code also offers additional functionality such as coloring expense bars based on value ranges and the inclusion of a range slider to filter data by date. This enriches the experience of
-user when exploring the data.
-- The user will be able to see their sales and revenues, expenses and customer satisfaction.
+- The project can be expanded to include more types of analyses and customizations.
 
-## Why?
 
-This project is a significant part of my personal portfolio and was also developed as part of an academic work. 
-The challenge was to create software that would have to contain data visualization (descriptive statistics).
-
-## Some observations about this App
-
-- Dummy data in the excel file was used to test the software. Test with other files and make changes as necessary
 
 
